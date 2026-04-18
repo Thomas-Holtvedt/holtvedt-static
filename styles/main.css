@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 200px;
+  background-color: #111;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/photo-barcode-night.jpg');
+  background-position: center 35%;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 30px 18px;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.navbar a.nav-left {
+  font-size: 2.8rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+main {
+  padding-top: 200px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.about-photo {
+  float: left;
+  width: 200px;
+  margin: 0 20px 10px 0;
+  border: 1px solid #111;
+}
+
+.contact-heading {
+  clear: both;
+  margin-top: 40px;
+}
+
+.contact-intro {
+  max-width: 640px;
+}
+
+.contact-list {
+  margin: 20px 0 0;
+  max-width: 720px;
+}
+
+.contact-list dt {
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.contact-list dt:first-of-type {
+  margin-top: 0;
+}
+
+.contact-list dd {
+  margin: 4px 0 0;
+}
+
+.contact-note {
+  display: block;
+  color: #555;
+  margin-top: 4px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 360px;
+  margin: auto auto 15px;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.carousel-img {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #111;
+  opacity: 0.35;
+  transform: scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  cursor: pointer;
+}
+
+.carousel-img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(17, 17, 17, 0.75);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 4px;
+}
+
+.carousel-next {
+  right: 4px;
+}
+
+.carousel-btn:hover {
+  background: #111;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  border: 1px solid #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-cta {
+  display: inline-block;
+  align-self: flex-start;
+  padding-top: 16px;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+}
+
+.project-cta:hover {
+  color: #555;
+  border-bottom-color: #555;
+}
+
+.project-meta {
+  color: #555;
+  margin-top: 0;
+}
+
+.project-logo {
+  display: block;
+  max-width: 100%;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.project-logo-undisclosed {
+  filter: brightness(0) invert(0.6);
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    height: 140px;
+    padding: 0 16px 12px;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    margin: 0 6px;
+  }
+
+  .navbar a.nav-left {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding-top: 140px;
+  }
+
+  section {
+    padding: 24px 20px;
+  }
+
+  .about-photo {
+    width: 140px;
+  }
+}
