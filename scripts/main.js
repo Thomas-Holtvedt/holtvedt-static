@@ -71,6 +71,11 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     if (i !== index) goTo(i);
   }));
 
-  goTo(index, false);
-  window.addEventListener('resize', () => goTo(index, false));
+  const recenter = () => goTo(index, false);
+  recenter();
+  window.addEventListener('load', recenter);
+  new ResizeObserver(recenter).observe(viewport);
+  Array.from(track.querySelectorAll('img')).forEach((img) => {
+    if (!img.complete) img.addEventListener('load', recenter, { once: true });
+  });
 });
