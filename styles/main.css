@@ -138,11 +138,11 @@ section {
 }
 
 .carousel-prev {
-  left: max(4px, calc(50% - var(--slide-w) / 2 + 4px));
+  left: max(4px, calc(50% - var(--slide-w) / 2 - 32px));
 }
 
 .carousel-next {
-  right: max(4px, calc(50% - var(--slide-w) / 2 + 4px));
+  right: max(4px, calc(50% - var(--slide-w) / 2 - 32px));
 }
 
 .carousel-btn:hover {
