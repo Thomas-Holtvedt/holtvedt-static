@@ -159,6 +159,7 @@ section {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .project-cta {
@@ -226,5 +227,19 @@ section {
 
   .about-photo {
     width: 140px;
+  }
+
+  .carousel-img {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .carousel-prev {
+    left: 8px;
+  }
+
+  .carousel-next {
+    right: 8px;
   }
 }
