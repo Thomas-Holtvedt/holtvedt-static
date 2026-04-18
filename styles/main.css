@@ -87,6 +87,8 @@ section {
 }
 
 .carousel {
+  --slide-w: 240px;
+  --slide-h: 180px;
   position: relative;
   max-width: 360px;
   margin: auto auto 15px;
@@ -104,9 +106,9 @@ section {
 }
 
 .carousel-img {
-  flex: 0 0 240px;
-  width: 240px;
-  height: 180px;
+  flex: 0 0 var(--slide-w);
+  width: var(--slide-w);
+  height: var(--slide-h);
   object-fit: cover;
   border: 1px solid #111;
   opacity: 0.35;
@@ -136,11 +138,11 @@ section {
 }
 
 .carousel-prev {
-  left: 4px;
+  left: max(4px, calc(50% - var(--slide-w) / 2 + 4px));
 }
 
 .carousel-next {
-  right: 4px;
+  right: max(4px, calc(50% - var(--slide-w) / 2 + 4px));
 }
 
 .carousel-btn:hover {
@@ -229,17 +231,8 @@ section {
     width: 140px;
   }
 
-  .carousel-img {
-    flex: 0 0 200px;
-    width: 200px;
-    height: 150px;
-  }
-
-  .carousel-prev {
-    left: 8px;
-  }
-
-  .carousel-next {
-    right: 8px;
+  .carousel {
+    --slide-w: 200px;
+    --slide-h: 150px;
   }
 }
